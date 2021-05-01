@@ -6,10 +6,10 @@ const client = new Discord.Client({ fetchAllMembers: true, disableMentions: 'her
 
 //------------- CONFIG
 global.config = {
-  "token": "ODA0Njg0OTY0MDQ5NDUzMDY2.YBP7RQ.REV0PI-XHqP-ZohisqKtjnoBFVs",
-  "clientid": "804684964049453066",
-  "secret": "4v8B36uAOqaGsfzJ5dINnsxlqRTe4bW6",
-  "callback": "https://voiddevs.org/callback",
+  "token": "",
+  "clientid": "",
+  "secret": "",
+  "callback": "",
   "site": "https://voiddevs.org"
 }
 //------------- CONFIG
