@@ -1,0 +1,49 @@
+{
+  "name": "voiddevs.org",
+  "version": "0.0.1",
+  "description": "voiddevs.org",
+  "main": "voidserver-main.js",
+  "scripts": {
+    "start": "node voidserver-main.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.5",
+    "child_process": "^1.0.2",
+    "cron": "^1.8.2",
+    "discord.js": "^12.5.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "fs": "^0.0.2",
+    "helmet": "^4.4.1",
+    "jimp": "^0.16.1",
+    "level-session-store": "^2.2.0",
+    "marked": "^2.0.2",
+    "memorystore": "^1.6.5",
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.12.3",
+    "node-fetch": "^2.6.1",
+    "parse-ms": "^3.0.0",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
+    "path": "^0.12.7",
+    "void.db": "^2.0.1",
+    "discord.js-collector": "^1.8.9"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "url": ""
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

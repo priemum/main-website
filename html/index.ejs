@@ -1,0 +1,188 @@
+<%- include('static/header.ejs', {bot, user, path}) %>
+<%
+let cvar = ["zoom-in-right","fade-up", "fade-down", "zoom-in-left", "flip-right", "flip-left","fade-right","fade-left"]
+%>
+<section id="home" class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-6">
+                    <h2 class="title is-title is-size-2 has-text-white">Welcome to <br><colored>Void Development</colored></h2>
+<div class="mt-10 mb-5">
+  <a class="button is-void" href="#projects">
+   Projects</a>
+  <a class="smoothScroll button is-discord" href="/discord">
+    <i class="fab fa-discord"></i>&nbsp;Discord</a>
+</div>
+                </div>
+                <div class="column is-5 has-text-centered">
+                  <center>
+                    <figure class="image">
+                        <img src="https://i.hizliresim.com/9wqffw.png" alt="voiddevs.png">
+                    </figure>
+                  </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#14151b" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+<section id="more" class="hero is-back-dark is-section-secondary is-bold ">
+    <div class="hero-body padding-bottom-hp has-text-centered">
+        <div class="container">
+            <div class="title-wrapper has-text-centered has-padding-20 has-margin-bottom-20">
+                <h2 class="subtitle is-3 has-text-weight-semi-bold has-text-white">F.A.Q.</h2>
+            </div>
+            <br><br><br>
+
+            <div class="columns is-multiline has-padding-10">     
+                <div data-aos="fade-right" class="column is-3 is-offset-2">
+                        <span class="icon has-text-primary is-large">
+                            <i class="fas fa-3x fa-ban has-text-danger"></i>
+                        </span>
+                        <br><br>
+                    <h3 class="title is-size-5 has-text-weight-semi-bold has-text-white">
+                        Ban Appeals
+                    </h3>
+                    <div class="is-size-6 has-text-white">
+						For ban removal requests, send an email to <strong href="mailto:appeals@voiddevs.org" class="has-text-white">appeals@voiddevs.org</strong>.
+                    </div>
+                </div>
+  
+                <div data-aos="fade-left" class="column is-3 is-offset-2">
+                        <span class="icon has-text-primary is-large">
+                            <i class="fas fa-3x fa-paper-plane has-text-info"></i>
+                        </span>
+                        <br><br>
+                    <h3 class="title is-size-5 has-text-weight-semi-bold has-text-white">
+                        Contact
+                    </h3>
+                    <div class="is-size-6 has-text-white">
+						For communication, it will be enough to join our
+<strong href="https://voiddevs.org/discord" class="has-text-white">discord address</strong>.
+                    </div>
+                </div>
+          </div>
+        </div>
+    </div>
+</section>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#14151b" fill-opacity="1" d="M0,160L48,133.3C96,107,192,53,288,37.3C384,21,480,43,576,69.3C672,96,768,128,864,122.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+
+<section id="more" class="hero is-section-secondary is-bold ">
+ <div class="hero-body padding-bottom-hp ">
+        <div class="container">
+            <div class="title-wrapper has-text-centered has-padding-20 has-margin-bottom-20">
+                <h2 class="has-text-centered subtitle is-3 has-text-weight-semi-bold has-text-white">Projects</h2>
+            </div>
+<br>
+<div id="projects" class="container">
+  
+<% db.get(`projects`).map(a => { %>
+<div data-aos="<%=cvar[Math.floor(Math.random() * cvar.length)];%>">
+<div class="column vcodes_column" >
+<div style="border-color: #<%= a.hexColor %>" class="voiddevs_projects">
+<div class="card-image">
+<img src="<%= a.imageurl %>">
+</div>
+<div class="voiddevs_body">
+<h1 style="font-size: 24px;"><%= a.name %></h1><br>
+<p class="voiddevs_desc" style="font-size: 16px;color: #6c757d!important"><%= a.description %></p><br>
+<h2 style="color: #fff;margin-top: 5px;"><a href="<%= a.visiturl %>" class="voidbutton is-visit">Visit</a></h2>
+</div>
+</div>
+</div>
+</div>
+<% }) %>
+  
+</div>
+          
+   </div>
+</div>
+</section>
+
+  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#14151b" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+<section id="more" class="hero is-back-dark is-section-secondary is-bold ">
+ <div class="hero-body padding-bottom-hp ">
+        <div class="container">
+            <div class="title-wrapper has-text-centered has-padding-20 has-margin-bottom-20">
+                <h2 class="has-text-centered subtitle is-3 has-text-weight-semi-bold has-text-white">Meet Our Team</h2>
+            </div>
+       
+
+<%
+let serverID = "701153938870894673";
+let founders = "790687219261374524";
+let seniormod = "790687224764956732";
+let mod = "790687227344715817";
+let manager = "790687226010927144";
+%>
+<div class="container">
+<% bot.guilds.cache.get(serverID).members.cache.filter(a => a.roles.cache.has(founders)).map(a => {%>
+<div data-aos="<%=cvar[Math.floor(Math.random() * cvar.length)]%>">
+<div class="column vcodes_column">
+<div style="border-color: <%=bot.guilds.cache.get(serverID).roles.cache.get(founders).hexColor%>" class="vcodes_teamcard border-animation">
+<div class="user">
+<h1><%=a.user.username%></h1>
+<h2 style="color: <%=bot.guilds.cache.get(serverID).roles.cache.get(founders).hexColor%>"><%=bot.guilds.cache.get(serverID).roles.cache.get(founders).name%></h2>
+</div>
+<div class="avatar">
+<img draggable="false" class="pulse-avatar-<%=a.presence.status%>" src="<%=bot.users.cache.get(a.id).avatarURL({dynamic: true})%>">
+</div>
+</div>
+</div>
+</div>
+<% }) %>
+<% bot.guilds.cache.get(serverID).members.cache.filter(a => !a.roles.cache.has(founders) && a.roles.cache.has(seniormod) ).map(a => {%>
+<div data-aos="<%=cvar[Math.floor(Math.random() * cvar.length)]%>">
+<div class="column vcodes_column">
+<div style="border-color: <%=bot.guilds.cache.get(serverID).roles.cache.get(seniormod).hexColor%>" class="vcodes_teamcard border-animation">
+<div class="user">
+<h1><%=a.user.username%></h1>
+<h2 style="color: <%=bot.guilds.cache.get(serverID).roles.cache.get(seniormod).hexColor%>"><%=bot.guilds.cache.get(serverID).roles.cache.get(seniormod).name%></h2>
+</div>
+<div class="avatar">
+<img draggable="false" class="pulse-avatar-<%=bot.users.cache.get(a.id).presence.status%>" src="<%=bot.users.cache.get(a.id).avatarURL({dynamic: true})%>">
+</div>
+</div>
+</div>
+</div>
+<% }) %>
+<% bot.guilds.cache.get(serverID).members.cache.filter(a => !a.roles.cache.has(founders) && !a.roles.cache.has(seniormod) && a.roles.cache.has(mod)).map(a => {%>
+<div data-aos="<%=cvar[Math.floor(Math.random() * cvar.length)]%>">
+<div class="column vcodes_column">
+<div style="border-color: <%=bot.guilds.cache.get(serverID).roles.cache.get(mod).hexColor%>" class="vcodes_teamcard border-animation">
+<div class="user">
+<h1><%=a.user.username%></h1>
+<h2 style="color: <%=bot.guilds.cache.get(serverID).roles.cache.get(mod).hexColor%>"><%=bot.guilds.cache.get(serverID).roles.cache.get(mod).name%></h2>
+</div>
+<div class="avatar">
+<img draggable="false" class="pulse-avatar-<%=bot.users.cache.get(a.id).presence.status%>" src="<%=bot.users.cache.get(a.id).avatarURL({dynamic: true})%>">
+</div>
+</div>
+</div>
+</div>
+<% }) %>
+<% bot.guilds.cache.get(serverID).members.cache.filter(a => !a.roles.cache.has(founders) && !a.roles.cache.has(seniormod) && !a.roles.cache.has(mod) && a.roles.cache.has(manager)).map(a => {%>
+<div data-aos="<%=cvar[Math.floor(Math.random() * cvar.length)]%>">
+<div class="column vcodes_column">
+<div style="border-color: <%=bot.guilds.cache.get(serverID).roles.cache.get(manager).hexColor%>" class="vcodes_teamcard border-animation">
+<div class="user">
+<h1><%=a.user.username%></h1>
+<h2 style="color: <%=bot.guilds.cache.get(serverID).roles.cache.get(manager).hexColor%>"><%=bot.guilds.cache.get(serverID).roles.cache.get(manager).name%></h2>
+</div>
+<div class="avatar">
+<img draggable="false" class="pulse-avatar-<%=bot.users.cache.get(a.id).presence.status%>" src="<%=bot.users.cache.get(a.id).avatarURL({dynamic: true})%>">
+</div>
+</div>
+</div>
+</div>
+<% }) %>
+</div>
+</div>
+</section>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#14151b" fill-opacity="1" d="M0,160L48,133.3C96,107,192,53,288,37.3C384,21,480,43,576,69.3C672,96,768,128,864,122.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+
+<%- include('static/footer.ejs') %>

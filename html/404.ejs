@@ -1,0 +1,32 @@
+<style>
+  #navbarBasicExample {
+    display: none;
+  }
+  #home {
+    margin-top: 10px;
+  }
+</style>
+<%- include('static/header.ejs', {bot, user, path}) %>
+<section id="home" class="hero">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-6">
+                    <h2 class="title is-title is-size-4 has-text-white">
+                      <colored class="is-size-2">404</colored>
+                      <br>
+                      This page could not be found.
+                  </h2>
+                    <a href="/" class="button is-discord is-medium">
+                     <i class="fa fa-home"></i>&nbsp;Home
+                    </a>
+                </div>
+                <div class="column is-5 has-text-centered">
+                    <figure class="image">
+                        <img src="https://i.hizliresim.com/9wqffw.png" alt="voiddevs.png">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

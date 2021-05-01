@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "name": "Temps City",
+      "description": "Website theme sharing platform.",
+      "visiturl": "https://temps.city",
+      "imageurl": "https://cdn.discordapp.com/attachments/742496324271734846/815220053057732628/unknown.png",
+      "hexColor": "006dff"
+    },
+    {
+      "name": "Devs Forum",
+      "description": "DevsForum was opened to provide a benefit for developers and coders, friends.",
+      "visiturl": "https://devsforum.net",
+      "imageurl": "https://i.hizliresim.com/nj6duv.png",
+      "hexColor": "07b3c9"
+    },
+    {
+      "name": "Allegro",
+      "description": "The Allegro music bot emerged in 2020 and started serving more than 200,000 users in a short time.",
+      "visiturl": "https://allegrobot.xyz",
+      "imageurl": "https://i.hizliresim.com/tijkxh.png",
+      "hexColor": "4e75f3"
+    }
+  ]
+}
