@@ -40,10 +40,9 @@
   "repository": {
     "url": ""
   },
-  "license": "MIT",
+  "license": "MPL-2.0 License",
   "keywords": [
     "node",
-    "glitch",
     "express"
   ]
 }
